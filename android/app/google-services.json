@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "647685671998",
+    "project_id": "movie-app-5891c",
+    "storage_bucket": "movie-app-5891c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647685671998:android:670dd5a158ff0b52ea156f",
+        "android_client_info": {
+          "package_name": "com.example.aldmictest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXmNljyyqoO6gjGNjI71ATK-PNJlcfNFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
