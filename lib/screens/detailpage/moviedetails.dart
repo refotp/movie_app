@@ -80,7 +80,10 @@ class MovieDetailsPage extends StatelessWidget {
                             height: 80,
                           ),
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              controller.saveFavoriteMovie(
+                                  controller.movieDetails.value);
+                            },
                             child: Container(
                               width: double.infinity,
                               height: 40,
@@ -88,12 +91,13 @@ class MovieDetailsPage extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(25),
                                   color: const Color.fromARGB(255, 0, 40, 71)),
                               child: const Center(
-                                  child: Text(
-                                'Tambah ke favorit',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500),
-                              )),
+                                child: Text(
+                                  'Tambah ke favorit',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
                             ),
                           )
                         ],

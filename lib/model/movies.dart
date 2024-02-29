@@ -13,10 +13,10 @@ class MovieList {
       required this.id});
 
   factory MovieList.fromJson(Map<String, dynamic> json) => MovieList(
-        title: json["Title"] ?? '',
-        year: json["Year"] ?? '',
-        id: json["imdbID"] ?? '',
-        type: json["Type"] ?? '',
+        title: json["Title"] == 'N/A' ? '' : json["Title"],
+        year: json["Year"] == 'N/A' ? '' : json["Year"],
+        id: json["imdbID"] == 'N/A' ? '' : json["imdbID"],
+        type: json["Type"] == 'N/A' ? '' : json["Type"],
         poster: json["Poster"] == 'N/A'
             ? 'https://betravingknows.com/wp-content/uploads/2017/06/video-movie-placeholder-image-grey.png'
             : json["Poster"],

@@ -1,4 +1,6 @@
+import 'package:aldmictest/services/authenticationservice.dart';
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 class AboutUS extends StatelessWidget {
   const AboutUS({super.key});
@@ -13,6 +15,17 @@ class AboutUS extends StatelessWidget {
           'Tentang kami',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              AuthenticationService.instance.logout();
+            },
+            icon: const Icon(
+              Ionicons.log_out,
+              color: Colors.white,
+            ),
+          )
+        ],
       ),
       body: const Padding(
         padding: EdgeInsets.all(24.0),

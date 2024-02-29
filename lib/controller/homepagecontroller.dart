@@ -3,6 +3,7 @@ import 'package:aldmictest/secrets/apikey.dart';
 import 'package:aldmictest/services/apiservice.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ionicons/ionicons.dart';
 
 class HomePageController extends GetxController {
   static HomePageController get instance => Get.find();
@@ -18,7 +19,24 @@ class HomePageController extends GetxController {
           await ApiService.fetchMovieList(ApiKey().apiKey, search);
       moviesList.assignAll(fetchedMovies);
     } catch (e) {
-      throw 'Something went wrong';
+      Get.snackbar('', '',
+          duration: const Duration(seconds: 5),
+          snackPosition: SnackPosition.BOTTOM,
+          icon: const Icon(
+            Ionicons.warning,
+            color: Colors.white,
+          ),
+          backgroundColor: Colors.red,
+          colorText: Colors.white,
+          titleText: const Text(
+            'Error',
+            style: TextStyle(
+                fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
+          ),
+          messageText: const Text(
+            'Film tidak dapat ditemukan',
+            style: TextStyle(fontSize: 16, color: Colors.white),
+          ));
     } finally {}
   }
 }
