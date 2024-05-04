@@ -1,4 +1,4 @@
-# aldmictest
+# Movie App
 
 Untuk login dalam aplikasi ini saya menggunakan email dan password : 
 
